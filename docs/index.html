@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>ATWD1 Assignment</title>
+<style type="text/css">
+.tbl-layout {
+	border-collapse: collapse;
+	border: 1px solid #808080;
+}
+.cell-header {
+	color: #FFFFFF;
+	background-color: #3333FF;
+}
+.cell-back {
+	background-color: #C0C0C0;
+}
+</style>
+</head>
+
+<body>
+<h3>ATWD1 Assignment</h3>
+<h4>username: Ben Molyneux | number: 13020319</h4>
+<p><strong>Test Outcomes: (outcome is either pass or fail)</strong></p>
+<table cellpadding="3" class="tbl-layout" style="width: 640
+px">
+	<tr>
+		<td class="cell-header" style="height: 25px">Test</td>
+		<td style="height: 25px" class="cell-header">Outcome </td>
+		<td style="height: 25px; width: 189px;" class="cell-header">Comment</td>
+	</tr>
+	<tr>
+		<td style="height: 25px">1. Return XML converting 10.35 from GBP to EUR</td>
+		<td style="height: 25px">pass </td>
+		<td style="height: 25px; width: 189px"></td>
+	</tr>
+	<tr>
+		<td class="cell-back">2. Return JSON converting 14.85 from NOK to DKK</td>
+		<td class="cell-back">pass</td>
+		<td style="width: 189px" class="cell-back">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="height: 25px">3. Error 1 - currency not recognized - return
+		1000</td>
+		<td style="height: 25px">pass</td>
+		<td style="height: 25px; width: 189px;"></td>
+	</tr>
+	<tr>
+		<td class="cell-back">4. Error 2 - no parameters - return 1100</td>
+		<td class="cell-back">pass</td>
+		<td style="width: 189px" class="cell-back">&nbsp;</td>
+	</tr>
+	<tr>
+		<td>5. Error 3 - missing parameter - return 1100</td>
+		<td>pass</td>
+		<td style="width: 189px">&nbsp;</td>
+	</tr>
+	<tr>
+		<td class="cell-back">6. Error 4 - too many parameters - return 1200</td>
+		<td class="cell-back">pass</td>
+		<td style="width: 189px" class="cell-back">&nbsp;</td>
+	</tr>
+	<tr>
+		<td style="height: 25px">7. Error 5 - format value is not &apos;xml&apos; or &apos;json&apos; - return 1200</td>
+		<td style="height: 25px">pass</td>
+		<td style="width: 189px; height: 25px;"></td>
+	</tr>
+	<tr>
+		<td class="cell-back" style="height: 25px">8. Error 6 - amnt not a
+		decimal number - return 1300</td>
+		<td class="cell-back" style="height: 25px">pass</td>
+		<td class="cell-back" style="width: 189px; height: 25px;"></td>
+	</tr>
+	<tr>
+		<td style="height: 25px">9. Error 7 - you will have to make a file
+		unavailable (for instance) to <br>re-create this error -
+		return 1400</td>
+		<td style="height: 25px">pass </td>
+		<td style="height: 25px; width: 189px;"></td>
+	</tr>
+</table>
+<p><strong>Links to Service:</strong></p>
+<p>Live Service - convert 105.33 from NOK to TRY and format as XML:<br>
+<a href="http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/index.php?from=NOK&amp;to=TRY&amp;amnt=105.33&amp;format=xml" target="_blank">
+http://isa.cems.uwe.ac.uk/~a-student/atwd1/assignment/?from=NOK&amp;to=TRY&amp;amnt=105.33&amp;format=xml</a></p>
+<p>Live Service - convert 23.63458 from HUF to INR and format as JSON:<br>
+<a href="http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/index.php?from=HUF&amp;to=INR&amp;amnt=23.63458&amp;format=json">
+http://isa.cems.uwe.ac.uk/~a-student/atwd1/assignment/?from=HUF&amp;to=INR&amp;amnt=23.63458&amp;format=json</a></p>
+<p>Link to Update Form:<br>
+<a href="http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/form.html">http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/update_from.html</a></p>
+<p><strong>Links to Data Files:</strong></p>
+<p>Currency File:<br>
+<a href="http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/data/currencies.xml">
+http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/data/currencies.xml</a></p>
+<p>Rates File:<br>
+<a href="http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/data/rates.xml">
+http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/data/rates.xml</a></p>
+<p>[any other data file links go here]</p>
+<p><strong>Links to PHP source files: </strong></p>
+<p>[Save *. php files as *.phps files and put thm in directory called "source"
+under "docs"]</p>
+<p>Main index file:<br>
+<a href="http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/docs/source/index.phps">
+http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/docs/source/index.phps</a></p>
+<p>Functions file:<br>
+<a href="http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/docs/source/functions.phps">
+http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/docs/source/functions.phps</a></p>
+<p>POST form handling file:<br>
+<a href="http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/docs/source/currPost.phps">
+http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/docs/source/currPost.phps</a></p>
+<p>PUT form handling file:<br>
+<a href="http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/docs/source/currPut.phps">
+http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/docs/source/currPut.phps</a></p>
+<p>DELETE from form file:<br>
+<a href="http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/docs/source/currPut.phps">
+http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/docs/source/currDelete.phps</a></p>
+<p>Config file:<br>
+<a href="http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/docs/source/config.phps">
+http://isa.cems.uwe.ac.uk/~b2-molyneux/atwd1/assignment/docs/source/config.phps</a></p>
+
+<hr>
+<p><strong>Advantages/disadvantages of the REST compaired to SOAP and XML
+	RPC?</strong><br><br>
+	Firstly, REST is easier to understand and use for developers as it uses HTTP (and other protocols such as FTP, SMTP) with operations that are already familiar to us such as POST, PUT, GET and DELETE for transferring data. It is much easier for developers and web users take advantage of API’s that are RESTful, which is why all major web companies now use REST and encourage its use.
+	<br><br>
+	Another great advantage of using REST is that it is stateless which means that only the data is transferred between server and client which means you can separate the two concerns; the server is no longer worried about the user interface and the client should not be worried about data storage which then allows for greater scalability, independent deployment of components and allows legacy systems to be encapsulated and still work using a RESTful system. REST is lightweight in nature and is much more suited to a mobile web where connection and bandwidth may vary. REST also allows for caching, again increases performance and using less bandwidth which SOAP cannot do.
+	<br><br>
+	SOAP and REST vary also in the way that they function with REST being more of an architecture for accessing a resource through a URI whereas SOAP is a protocol for transferring data that’s more function-driven, whereas REST is data-driven.
+	<br><br>
+	REST also permits many different data formats such as plain text, HTML, XML, and JSON whereas SOAP only allows XML.
+
+<br><br>
+
+<strong>Extending and Improving the Application<br></strong>
+<br>
+There are a couple of ways I might want to extend and improve my application. Firstly client side validation on my form would be one method for providing a better, more intuitive solution for catching user errors. This could be done through javascript validation on the input fields that could check my inputs and provide error messages even before the form has been submitted. This paired would server side validation would be a rigorous and professional solution for my application.
+<br><br>
+Although it features it already, there is room for more functional programming techniques to be applied in my code. This is a programming paradigm that is a way of thinking about software construction that allows for more concise, more predictable and easier to test code. This could be applied to both JavaScript and PHP coding within my project.
+<br><br>
+Another way in which the project could be extended would be to use a framework such as Node.js deployed on the server to handle all of file requests. Node.js is built on javascripts asynchronous processing that can service more concurrent requests than conventional multithreaded servers. This makes it a great fit for data driven applications – which is slightly beyond the scope of our project but is worth noting for future developments. It would also then mean all of the programming code would be written in one language.
+
+</p>
+<hr>
+<p>&nbsp;</p>
+</body>
+</html>

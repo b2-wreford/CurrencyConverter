@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Add, delete or update a currency</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css" media="screen" title="no title" charset="utf-8">
+  </head>
+  <body>
+    <div class="container">
+      <form method="POST" action="">
+        <h1>Currency Converter Form</h1>
+        <div class="radio">
+          <label><input type="radio" name="method" value="post" url="form/currPost.php" id="post_checked" checked="checked"/>Post</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="method" value="put" url="form/currPut.php" id="put_checked"/>Put</label>
+        </div>
+        <div class="radio">
+          <label><input type="radio" name="method" value="delete" url="form/currDelete.php" id="delete_checked"/>Delete</label>
+        </div>
+        <div class="form-group">
+          <label for="ccode">Currency Code</label>
+          <input type="text" name="currency_code" class="form-control" id="ccode">
+        </div>
+        <div class="form-group">
+          <label for="cname">Currency Name</label>
+          <input type="text" name="currency_name" class="form-control" id="cname">
+        </div>
+        <div class="form-group">
+          <label for="r">Rate (£=1)</label>
+          <input type="text" name="rate" class="form-control" id="r">
+        </div>
+        <div class="form-group">
+          <label for="countries">Countries (seperate by comma)</label>
+          <input type="text" name="cntry" class="form-control" id="countries">
+        </div>
+        <input type="submit" class="btn btn-default" value="Submit">
+        <br/>
+        <div class="form-group response">
+         <label for="comment">Response</label>
+         <textarea id="response" rows="5" cols="80"></textarea>
+        </div>
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $("form").submit(function(e){
+          e.preventDefault();
+          var formData = $("form").serialize();
+          console.log(formData);
+          var url = $("input[name='method']:checked").attr("url");
+
+          $.ajax({
+            type: "POST",
+            url: url,
+            data: formData,
+            dataType: 'text',
+            success: function(response){
+              $('#response').text(response);
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
